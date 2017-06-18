@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<title>选择地区</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="js/dialog.js"></script>
+	<script type="text/javascript" src="js/mobile-select-area.js"></script>
+	<link rel="stylesheet" type="text/css" href="mobile-select-area.css">
+</head>
+<style type="text/css">
+	body>div {
+		line-height: 40px;
+		color: #666;
+	}
+</style>
+
+<body>
+	<div>默认选中第一项:<input type="text" id="txt_area" />
+		<input type="hidden" id="hd_area" /></div>
+	<script>
+		var selectArea = new MobileSelectArea();
+		selectArea.init({ trigger: '#txt_area', value: $('#hd_area').val(), data: 'data.json' });
+	</script>
+</body>
+
+</html>
